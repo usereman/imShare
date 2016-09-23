@@ -1,0 +1,6 @@
+framework module Pods_imshare {
+  umbrella header "Pods-imshare-umbrella.h"
+
+  export *
+  module * { export * }
+}
