@@ -19,6 +19,7 @@
 		DBB8CAAE1D7F56D3001ABDB2 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB8CAAD1D7F56D3001ABDB2 /* NewViewController.swift */; };
 		DBE535001D8047C700088693 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBE534FF1D8047C700088693 /* GoogleService-Info.plist */; };
 		DBE535021D81DD8F00088693 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE535011D81DD8F00088693 /* LoginViewController.swift */; };
+		DBF5120E1D967F47006E7C62 /* addingImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF5120D1D967F47006E7C62 /* addingImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		DBB8CAAD1D7F56D3001ABDB2 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		DBE534FF1D8047C700088693 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DBE535011D81DD8F00088693 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DBF5120D1D967F47006E7C62 /* addingImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addingImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				DBB8CAAB1D7F564D001ABDB2 /* CollectionViewCell.swift */,
 				DBB8CAAD1D7F56D3001ABDB2 /* NewViewController.swift */,
 				DBE535011D81DD8F00088693 /* LoginViewController.swift */,
+				DBF5120D1D967F47006E7C62 /* addingImageViewController.swift */,
 				DBB8CA811D7F45E1001ABDB2 /* Main.storyboard */,
 				DBB8CA841D7F45E1001ABDB2 /* Assets.xcassets */,
 				DBB8CA861D7F45E1001ABDB2 /* LaunchScreen.storyboard */,
@@ -429,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB8CA801D7F45E1001ABDB2 /* ViewController.swift in Sources */,
+				DBF5120E1D967F47006E7C62 /* addingImageViewController.swift in Sources */,
 				DBB8CA7E1D7F45E1001ABDB2 /* AppDelegate.swift in Sources */,
 				DBB8CAAC1D7F564D001ABDB2 /* CollectionViewCell.swift in Sources */,
 				DBE535021D81DD8F00088693 /* LoginViewController.swift in Sources */,

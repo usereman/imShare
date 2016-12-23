@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passTxtField: UITextField!
+    var Action = UIAlertAction.self
+    var actionString: String?
     
     override func viewDidLoad() {
         self.navigationItem.hidesBackButton = true
@@ -70,9 +72,10 @@ class LoginViewController: UIViewController {
         if self.emailTxtField.text == "" || self.passTxtField.text == ""
         {
             let alertController = UIAlertController(title: "Oops", message: "Please enter an Email and Password", preferredStyle: .Alert)
-            let defaultAction = UIAlertAction(title: "Ok", style: .Cancel, handler: nil)
-            
+            //let defaultAction = UIAlertAction(title: "Ok", style: .Cancel, handler: nil)
+
             self.presentViewController(alertController, animated: true, completion: nil)
+            
         }
         else
         {
@@ -86,6 +89,11 @@ class LoginViewController: UIViewController {
                 else
                 {
                     let alertController = UIAlertController(title: "Oops", message: error?.localizedDescription, preferredStyle: .Alert)
+                    let okAction = self.Action.init(title: "OK", style: .Default) { (action) -> Void in
+                        self.actionString = "OK"
+                        
+                    }
+                    alertController.addAction(okAction)
                     let defaultAction = UIAlertAction(title: "Ok", style: .Cancel, handler: nil)
                     
                     self.presentViewController(alertController, animated: true, completion: nil)

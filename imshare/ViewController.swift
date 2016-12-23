@@ -73,90 +73,91 @@ class ViewController: UIViewController, UICollectionViewDelegate, UIImagePickerC
     }
     @IBAction func addPictureBtnAction(sender: AnyObject) {
     
-        
-        let alertController : UIAlertController = UIAlertController(title: "Title", message: "Select Camera or Photo Library", preferredStyle: .ActionSheet)
-        let cameraAction : UIAlertAction = UIAlertAction(title: "Camera", style: .Default, handler: {(cameraAction) in
-            print("camera Selected...")
-            
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) == true {
-                
-                self.imagePicker.sourceType = .Camera
-                self.present()
-                
-            }else{
-                self.presentViewController(self.showAlert("Title", Message: "Camera is not available on this Device or accesibility has been revoked!"), animated: true, completion: nil)
-                
-            }
-            
-        })
-        
-        let libraryAction : UIAlertAction = UIAlertAction(title: "Photo Library", style: .Default, handler: {(libraryAction) in
-            
-            print("Photo library selected....")
-            
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) == true {
-                
-                self.imagePicker.sourceType = .PhotoLibrary
-                self.present()
-                
-            }else{
-                
-                self.presentViewController(self.showAlert("Title", Message: "Photo Library is not available on this Device or accesibility has been revoked!"), animated: true, completion: nil)
-            }
-        })
-        
-        let cancelAction : UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel , handler: {(cancelActn) in
-            print("Cancel action was pressed")
-        })
-        
-        alertController.addAction(cameraAction)
-        
-        alertController.addAction(libraryAction)
-        
-        alertController.addAction(cancelAction)
-        
-        alertController.popoverPresentationController?.sourceView = view
-        alertController.popoverPresentationController?.sourceRect = view.frame
-        
-        self.presentViewController(alertController, animated: true, completion: nil)
-        
-        
-        
+//        
+//        let alertController : UIAlertController = UIAlertController(title: "Title", message: "Select Camera or Photo Library", preferredStyle: .ActionSheet)
+//    let cameraAction : UIAlertAction = UIAlertAction(title: "Camera", style: .Default, handler: {(cameraAction) in
+//            print("camera Selected...")
+//            
+//            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) == true {
+//                
+//                self.imagePicker.sourceType = .Camera
+//                self.present()
+//                
+//            }else{
+//                self.presentViewController(self.showAlert("Title", Message: "Camera is not available on this Device or accesibility has been revoked!"), animated: true, completion: nil)
+//                
+//            }
+//            
+//        })
+//        
+//        let libraryAction : UIAlertAction = UIAlertAction(title: "Photo Library", style: .Default, handler: {(libraryAction) in
+//            
+//            print("Photo library selected....")
+//            
+//            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) == true {
+//                
+//                self.imagePicker.sourceType = .PhotoLibrary
+//                self.present()
+//                
+//            }else{
+//                
+//                self.presentViewController(self.showAlert("Title", Message: "Photo Library is not available on this Device or accesibility has been revoked!"), animated: true, completion: nil)
+//            }
+//        })
+//        
+//        let cancelAction : UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel , handler: {(cancelActn) in
+//            print("Cancel action was pressed")
+//        })
+//        
+//        alertController.addAction(cameraAction)
+//        
+//        alertController.addAction(libraryAction)
+//        
+//        alertController.addAction(cancelAction)
+//        
+//        alertController.popoverPresentationController?.sourceView = view
+//        alertController.popoverPresentationController?.sourceRect = view.frame
+//        
+//        self.presentViewController(alertController, animated: true, completion: nil)
+//        
+//        
+//        
+//    }
+//    
+//    func present(){
+//        
+//        self.presentViewController(imagePicker, animated: true, completion: nil)
+//        
+//    }
+//    
+//    
+//    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+//        print("info of the pic reached :\(info) ")
+//        self.imagePicker.dismissViewControllerAnimated(true, completion: nil)
+//        
+//    }
+//    
+//    
+//    
+//    
+//    //Show Alert
+//    
+//    
+//    func showAlert(Title : String!, Message : String!)  -> UIAlertController {
+//        
+//        let alertController : UIAlertController = UIAlertController(title: Title, message: Message, preferredStyle: .Alert)
+//        let okAction : UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { (alert) in
+//            print("User pressed ok function")
+//            
+//        }
+//        
+//        alertController.addAction(okAction)
+//        alertController.popoverPresentationController?.sourceView = view
+//        alertController.popoverPresentationController?.sourceRect = view.frame
+//        
+//        return alertController
     }
     
-    func present(){
-        
-        self.presentViewController(imagePicker, animated: true, completion: nil)
-        
-    }
-    
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        print("info of the pic reached :\(info) ")
-        self.imagePicker.dismissViewControllerAnimated(true, completion: nil)
-        
-    }
-    
-    
-    
-    
-    //Show Alert
-    
-    
-    func showAlert(Title : String!, Message : String!)  -> UIAlertController {
-        
-        let alertController : UIAlertController = UIAlertController(title: Title, message: Message, preferredStyle: .Alert)
-        let okAction : UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { (alert) in
-            print("User pressed ok function")
-            
-        }
-        
-        alertController.addAction(okAction)
-        alertController.popoverPresentationController?.sourceView = view
-        alertController.popoverPresentationController?.sourceRect = view.frame
-        
-        return alertController
-    }
 
     }
 
